@@ -1,65 +1,84 @@
-import Image from "next/image";
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import Services from '@/components/Services';
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-white">
+      <Navbar />
+      <Hero />
+      <Services />
+      
+      {/* CTA Section */}
+      <section className="py-24 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Prêt à digitaliser votre entreprise ?
+          </h2>
+          <p className="text-xl text-blue-100 mb-10">
+            Que vous soyez au Togo, en Côte d'Ivoire, au Sénégal ou ailleurs en Afrique, 
+            nous sommes là pour vous accompagner.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <a 
+            href="/contact" 
+            className="inline-block bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-all shadow-xl"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            Démarrer un Projet
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-slate-900 text-slate-400 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-12 mb-12">
+            <div>
+              <h3 className="text-white text-2xl font-bold mb-4">
+                Ideenwerk <span className="text-blue-500">Technologies</span>
+              </h3>
+              <p className="text-sm leading-relaxed">
+                L'excellence digitale au service de l'Afrique. 
+                Nous créons des solutions technologiques innovantes 
+                pour les entreprises africaines. Basés au Togo, 
+                nous intervenons sur tout le continent.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold mb-4">Liens rapides</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="/" className="hover:text-white transition">Accueil</a></li>
+                <li><a href="/services" className="hover:text-white transition">Services</a></li>
+                <li><a href="/pourquoi-nous" className="hover:text-white transition">Pourquoi nous</a></li>
+                <li><a href="/faq" className="hover:text-white transition">FAQ</a></li>
+                <li><a href="/about" className="hover:text-white transition">À propos</a></li>
+                <li><a href="/contact" className="hover:text-white transition">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold mb-4">Contact</h4>
+              <ul className="space-y-2 text-sm">
+                <li>📍 Lomé, Togo (Base opérationnelle)</li>
+                <li>🌍 Intervention sur toute l'Afrique</li>
+                <li>
+                  📱 <a href="tel:+22896315029" className="hover:text-white transition">+228 96 31 50 29</a>
+                </li>
+                <li>
+                  📱 <a href="tel:+22870888699" className="hover:text-white transition">+228 70 88 86 99</a>
+                </li>
+                <li>
+                  💬 <a href="https://wa.me/22896315029" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">WhatsApp : +228 96 31 50 29</a>
+                </li>
+                <li>
+                  ✉️ <a href="mailto:contact@ideenwerk-technologies.com" className="hover:text-white transition">contact@ideenwerk-technologies.com</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-slate-800 pt-8 text-center text-sm">
+            <p>&copy; 2026 Ideenwerk Technologies. Tous droits réservés. | Fait avec passion pour l'Afrique 🌍</p>
+          </div>
+        </div>
+      </footer>
+    </main>
   );
 }
