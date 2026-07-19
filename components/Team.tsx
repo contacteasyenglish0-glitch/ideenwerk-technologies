@@ -1,8 +1,25 @@
 export default function Team() {
   const team = [
-    { name: "[Votre Nom]", role: "Fondateur & CEO", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400" },
-    { name: "Amina K.", role: "Lead Développeuse", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" },
-    { name: "David M.", role: "Designer UX/UI", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400" }
+    { 
+      name: "Godfriend K. Agbevivi", 
+      role: "Fondateur & CEO", 
+      image: "/team/ceo.jpg" 
+    },
+    { 
+      name: "Ariana Swift", 
+      role: "Directrice Technique (CTO)", 
+      image: "/team/cto.jpg" 
+    },
+    { 
+      name: "Junior Gnom", 
+      role: "Lead Développeuse", 
+      image: "/team/lead-dev.jpg" 
+    },
+    { 
+      name: "Nahhan Sweetlife", 
+      role: "Designer UX/UI", 
+      image: "/team/designer.jpg" 
+    }
   ];
 
   return (
@@ -14,10 +31,10 @@ export default function Team() {
             Des experts passionnés qui donnent vie à vos projets digitaux.
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8 text-center">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           {team.map((member, index) => (
             <div key={index} className="group">
-              <div className="relative w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-100 group-hover:border-blue-500 transition-colors">
+              <div className="relative w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-100 group-hover:border-blue-500 transition-colors">
                 <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
               </div>
               <h3 className="text-xl font-bold text-slate-900">{member.name}</h3>
