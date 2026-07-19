@@ -1,14 +1,22 @@
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import About from '@/components/About';
 import Services from '@/components/Services';
+import Portfolio from '@/components/Portfolio';
+import Testimonials from '@/components/Testimonials';
+import Team from '@/components/Team';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
       <Hero />
+      <About />       {/* NOUVEAU : Présentation entreprise */}
       <Services />
+      <Portfolio />   {/* NOUVEAU : Projets */}
+      <Testimonials />{/* NOUVEAU : Témoignages */}
+      <Team />        {/* NOUVEAU : Équipe */}
       
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
@@ -49,10 +57,8 @@ export default function Home() {
               <ul className="space-y-2 text-sm">
                 <li><a href="/" className="hover:text-white transition">Accueil</a></li>
                 <li><a href="/services" className="hover:text-white transition">Services</a></li>
-                <li><a href="/pourquoi-nous" className="hover:text-white transition">Pourquoi nous</a></li>
-                <li><a href="/faq" className="hover:text-white transition">FAQ</a></li>
-                <li><a href="/about" className="hover:text-white transition">À propos</a></li>
                 <li><a href="/contact" className="hover:text-white transition">Contact</a></li>
+                <li><Link href="/mentions-legales" className="hover:text-white transition">Mentions Légales</Link></li>
               </ul>
             </div>
             <div>
@@ -60,30 +66,17 @@ export default function Home() {
               <ul className="space-y-2 text-sm">
                 <li>📍 Lomé, Togo (Base opérationnelle)</li>
                 <li>🌍 Intervention sur toute l'Afrique</li>
-                <li>
-                  📱 <a href="tel:+22896315029" className="hover:text-white transition">+228 96 31 50 29</a>
-                </li>
-                <li>
-                  📱 <a href="tel:+22870888699" className="hover:text-white transition">+228 70 88 86 99</a>
-                </li>
-                <li>
-                  💬 <a href="https://wa.me/22896315029" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">WhatsApp : +228 96 31 50 29</a>
-                </li>
-                <li>
-                  ✉️ <a href="mailto:contact@ideenwerk-technologies.com" className="hover:text-white transition">contact@ideenwerk-technologies.com</a>
-                </li>
+                <li>📱 <a href="tel:+22896315029" className="hover:text-white transition">+228 96 31 50 29</a></li>
+                <li>✉️ <a href="mailto:contact@ideenwerk-technologies.com" className="hover:text-white transition">contact@ideenwerk-technologies.com</a></li>
               </ul>
             </div>
           </div>
-          
-          {/* Ligne du bas avec le lien Mentions Légales ajouté */}
           <div className="border-t border-slate-800 pt-8 text-center text-sm">
             <p className="mb-2">&copy; 2026 Ideenwerk Technologies. Tous droits réservés. | Fait avec passion pour l'Afrique 🌍</p>
             <Link href="/mentions-legales" className="text-slate-500 hover:text-blue-400 transition-colors">
               Mentions Légales & Politique de confidentialité
             </Link>
           </div>
-
         </div>
       </footer>
     </main>
