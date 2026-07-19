@@ -32,7 +32,7 @@ export default function MentionsLegalesPage() {
               <li><strong>Adresse :</strong> Boulevard du 30 Août, Lomé, Togo</li>
               <li><strong>Téléphone :</strong> +228 96 31 50 29</li>
               <li><strong>Email :</strong> contact@ideenwerk-technologies.tech</li>
-              <li><strong>Directeur de la publication :</strong> [Votre Nom et Prénom]</li>
+              <li><strong>Directeur de la publication :</strong> [Godfriend Koffi Agbevivi]</li>
             </ul>
           </section>
 
